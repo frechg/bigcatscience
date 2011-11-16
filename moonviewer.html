@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Moon Spotter"/>
+<meta name="keywords" content="Moon Spotter, Teaching Moon Phases"/>
+
+<title>Big Cat Science</title>
+
+<link href="stylesheets/application.css" rel="stylesheet" type="text/css" />
+<link href="javascripts/nivo-slider/nivo-slider.css" rel="stylesheet" type="text/css" />
+<link href="javascripts/jquery/fancybox/jquery.fancybox-1.3.1.css" rel="stylesheet" type="text/css" />
+<link href="/fonts/dax_wide_light/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/nivo-slider/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="javascripts/nivo-slider/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="javascripts/jquery/contentswap.js"></script>
+<script type="text/javascript" src="javascripts/jquery/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#branding').animate({opacity: 1}, 2500);
+    });
+
+</script>
+
+<script type="text/javascript">
+
+$(window).load(function() {
+    $('#slider').nivoSlider({
+animSpeed:300, //Slide transition speed
+pauseTime:5000,
+effect: 'fold',
+directionNav:false,
+directionNavHide:true,
+controlNav:true, //1,2,3...
+controlNavThumbs:false, //Use thumbnails for Control Nav
+controlNavThumbsFromRel:true //Use image rel for thumbs
+});
+    });
+
+</script>
+
+<script type="text/javascript" >
+
+$(document).ready(function() {
+    $("a#fancy_img").fancybox({
+      'autoScale' : false,
+      'transitionIn' : 'fade',
+      'transitionOut' : 'fade',
+      'titlePosition' : 'inside',
+      'titleFormat' : 'null'
+      });
+    });
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+  <div id="header">
+    <div class="wrap">
+
+      <div id="logo"><a href="index.html"></a></div>
+
+      <ul id="nav">
+        <li class="home"><a href="index.html"></a></li>
+        <li class="moonviewer selected"><a href="moonviewer.html"></a></li>
+        <li class="shop"><a href="store.html"></a></li>
+        <li class="company"><a href="company.html"></a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div id="body">
+    <div class="wrap">
+
+      <div id="product-header">
+        <div id="branding"><img src="images/layout/mv_logo.png" /></div>
+      </div>
+
+      <div id="product-menu">
+        <div id="product-nav">
+          <ul id="sub-nav">
+            <li class="overview selected"><a href="#">Over View</a></li>
+            <li class="features"><a href="#">Features</a></li>
+            <li class="lessons"><a href="#">Lessons</a></li>
+            <li class="gallery"><a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_1.png">Gallery</a></li>
+          </ul>
+          <div id="purchase"><a href="store.html">Purchase</a></div>
+        </div>
+      </div>
+
+      <div id="overview">
+        <div class="product-images">
+          <div id="slider">
+            <img src="images/mv_1.png" alt="" />
+            <img src="images/mv_2.png" alt="" />
+            <img src="images/mv_3.png" alt="" />
+            <img src="images/mv_5.png" alt="" />
+            <img src="images/mv_6.png" alt="" />
+            <img src="images/mv_7.png" alt="" />
+            <img src="images/mv_8.png" alt="" />
+          </div>
+        </div>
+
+        <div class="product-content">
+          <div class="product-intro">
+            <h1>Like Nothing You've Seen Before<img src="images/layout/mv_model_mini.png"/></h1>
+            <p>The Moon Viewer is a tool for teaching phases of the moon and related topics. It is the first and only device that makes the students an interactive part of the Earth-Sun-Moon system. By stepping inside the model, students learn to transition between seeing the moon’s appearance from a polar view, to an earth bound view. This transition is necessary to form a true conceptual understanding of why we observe phases of the moon.</p>
+          </div>
+
+          <div class="moonviewer-details">
+            <h1>Polar View</h1>
+            <p>Typical student view of the Earth-Sun-Moon system. Students observe that the Moon is always half lit and half dark.</p>
+            <div id="polar-view"></div>
+          </div>
+          <div id="dark-divider"></div>
+          <div class="moonviewer-details">
+            <h1>Earth Bound View</h1>
+            <p>Student uses the Moon Viewer to become part of the model, observing the Earth Sun Moon system from the Earth Perspective.</p>
+            <div id="earth-view"></div>
+          </div>
+          <div class="left-col">
+            <div class="features"><a class="fancy-link" href="#">Moon Viewer Features</a></div>
+          </div>
+          <div class="right-col">
+            <div class="lessons"><a class="fancy-link" href="#">Moon Viewer Lessons</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="lessons">
+
+        <div class="product-content">
+
+          <div class="intro">
+            <h1>One Tool, Multiple Topics</h1>
+            <p>Explore the various lessons you can teach with the Moon Viewer</p> 
+          </div>
+
+
+          <div class="lesson">
+            <div class="lesson-title">
+              <h1>Phases of the Moon</h1>
+            </div>
+            <div id="phases-of-the-moon">
+              <h4>Teacher and Student Demonstration</h4>
+              <p>Using the model and a student volunteer, demonstrate the polar view and explain why the moon is normally illuminated half light and half dark.  Then, have a student step into the ring and raise it to eye level with the “new moon” facing a light source (windows). Student is now in “earthbound” view.  Have the student slowly turn their head counterclockwise and carefully observe each moon on the ring.  What do you see?  Record image on paper. “Why doesn’t the moon always appear half lit and half dark to us from the Earth?” What causes us to observe phases of the moon?</p>
+              <h4>Moon Phases Small Group "Cookbook" Lab</h4>
+              <p>Same as above except each group has a Moon Viewer.</p>
+              <h4>Moon Phases Small Group Inquiry Based Lab</h4>
+              <p>Present the students with the Moon Viewer moons detached from the ring and ask to them formulate a theory by arranging the moons in a manner that answers the following questions: “Why is the moon normally half-lighted and half-dark?” “Why doesn’t the moon always appear to us half lit and half dark throughout the month?” “Why do we see phases of the moon?” Turn them loose and watch the power of this inquiry based approach.</p>
+            </div>
+          </div>
+
+          <div class="lesson">
+            <h1>Solar and Lunar Eclipses</h1>
+            <div class="lesson-content">
+              <p>Begin by reviewing phases of the moon by placing a moon at different positions on the ring and asking them what phase of the moon is shown.  Move the sun (light source) in different positions to help them conceptualize how moving the position of the sun doesn’t change the relationship between the sun, earth and moon.</p>
+              <p>Use a student volunteer inside the Moon Viewer with two moons. Designate a light source as the sun. Place a moon at new phase and one at full phase on the ring. Remind them that the student’s eyes represent an earthbound observer.</p>
+              <p>Demonstrate and discuss the different theories offered by students for the following questions. “What phase of the moon would be required for a solar eclipse to occur?  For a lunar eclipse to occur? Why doesn’t an eclipse of the sun and moon occur every month?</p>
+              <p>If none stumble on the correct reasoning, demonstrate the five degree tilt in the lunar orbit and the conditions necessary to create a solar and lunar eclipse.</p>
+              <p>Repeat above using multiple Moon Viewers and small groups.</p>
+            </div>
+          </div>
+
+          <div class="lesson">
+            <h1>Annular and Total Solar Eclipses</h1>
+            <div class="lesson-content">
+              <p>Demonstrate the difference between an annular and total solar eclipse by placing a moon on the ring in new phase, and moving the ring closer and further away from a student standing inside the ring and asking them what happens to the “apparent diameter” of the moon. “How does a change in apparent diameter relate to annular and total solar eclipses? What type of orbit would cause this to occur?” Repeat above using multiple Moon Viewers and small groups.</p>
+            </div>
+          </div>
+
+          <div class="lesson">
+            <h1>Tides</h1>
+            <div class="lesson-content">
+              <p>Using a classroom globe, Moon Viewer and double sided tape, have students stick small index cards labeled “High” and “Low” on the globe to represent where each type of tide would be occurring for different moon placements on the ring. Setup several stations with varying moon phases and repeat the above. Define “Spring” and “Neap” tides.  What cause the differences between them?  If desired, this could lead into a discussion on <b>Newton’s Universal Law of Gravity.</b></p>
+            </div>
+          </div>
+
+          <div class="hot-point">
+            <h1>Elliptical Orbits</h1>
+            <div class="lesson-content">
+              <p>Using the flexability of the PVC ring, demonstrate the shape of an elliptical orbit by slightly compressing two opposite sides of the the Moon Viewer closer together. Show varying degrees of eccentricity by varying the amount of compression. Introduce the geometry of an ellipse and the eccentricity equation.</p>
+              <p>Setup around the room multiple Moon Viewers rings with varying amounts of eccentricity. (Tie string from side to side to hold desired shape).  Tape ring to lab table and designate the foci points inside the ring.  Using a meter stick, have small groups of students compute the eccentricity of the orbit at each station around the room.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="features">
+
+        <div class="product-content">
+
+          <img src="images/features-hero.png" />
+
+          <div class="left-col">
+            <div class="hot-point">
+              <h1>Students Get it</h1>
+              <p>The Moon Viewer simplifies difficult topics by reducing student confusion. Other models have students walk around the observer while trying to hold a side of a tiny moon on a stick facing one direction. This rarely works. The Moon Viewer eliminates this error by attaching moons on a large ring in the correct orientation and keeping them in place while students observe them from polar and earthbound views.</p>
+            </div>
+            <div class="hot-point">
+              <h1>Eight Moons for Eight Phases</h1>
+              <p>A complete model. Included is a large 36” ring with eight mounting points, one for each moon and therefore each moon phase. Moons are painted half white and half black with matching attachment points.  When oriented correctly, it illustrates all eight phases. Students can refer back to the model to complete their drawings. No extra add-ons needed. </p>
+            </div>
+            <div class="hot-point">
+              <h1>Inquiry Based and Hands-On</h1>
+              <p>Direct manipulation by students. With the Moonviewer, students can explore different arrangements of the moons to test their own theories of why we observe phases of the moon. Afterwards groups can present and demonstrate their theories to the class. Or, students can follow the traditional “cookbook” lab usually found with other models and complete hand-outs.  Once you have the Moonviewer you’ll discover what works best for you and your students.</p>
+            </div>
+          </div>
+          <div class="right-col">
+            <div class="hot-point">
+              <h1>Versatile</h1>
+              <p>The Moon Viewer can be used to teach several topics in the Sun, Earth and Moon System. Lessons can be simple teacher demonstrations or hands-on and inquiry based to help you meet the STEM (Science Technology Engineeriing and Math) standards.</p>
+            </div>
+            <div class="hot-point">
+              <h1>Teacher Friendly</h1>
+              <ul id="bullets">
+                <li><p><b>Modular.</b> Ring breaks down into four sections for easy setup, take-down, portability and small storage space.  Especially useful for those of us who teach in multiple locations.</p></li>
+                <li><p><b>Durable.</b> Made of lightweight pvc and ridged polystyrene.</p></li>
+                <li><p><b>Budget friendly.</b> Reasonable price when viewed as price per topic. Large discounts when purchasing multiple units.</p></li>
+                <li><p><b>No special equipment.</b> No wires, light bulbs, batteries, etc.</p></li>
+              </ul>
+            </div>
+            <div class="hot-point">
+              <h1>Differentiated Instruction</h1>
+              <p>The Moonviewer allows for large groups, small groups, individual instruction and varying degrees of complexity. Simple lessons on rotation and revolution can lead to lessons on phases, tides, eclipses and even elliptical orbits.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="gallery">
+        <a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_2.png"></a>
+        <a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_3.png"></a>
+        <a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_4.png"></a>
+        <a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_5.png"></a>
+        <a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_6.png"></a>
+        <a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_7.png"></a>
+        <a id="fancy_img" rel="Moon-Viewer" title="" href="images/mv_8.png"></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="wrap">
+      <p>Big Cat Science © 2011</p>
+      <ul id="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="moonviewer.html">Moon Viewer</a></li>
+        <li><a href="store.html">Shop</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

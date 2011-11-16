@@ -1,0 +1,805 @@
+/*------------------------------------------
+	Reset (from the Yahoo UI Library)
+------------------------------------------*/
+ 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul,li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+ 
+a{outline: none;}
+
+ol, ul {
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+}
+
+/*-----------------------------------------
+				Typography
+-----------------------------------------*/
+
+h1 {
+ font-size: 24px;
+ color: rgb(50,50,50);
+ font-family: helvetica, verdana, arial, sans-serif;
+}
+
+h2 {
+ font-size: 36px;
+ color: rgb(50,50,50);
+ font-family: helvetica, verdana, arial, sans-serif;
+}
+
+h3 {
+ font-size: 18px;
+ color: rgb(50,50,50);
+ font-family: helvetica, verdana, arial, sans-serif;
+}
+
+h4 {
+ padding-top: 20px;
+ font-size: 18px;
+ color: rgb(50,50,50);
+ font-family: helvetica, verdana, arial, sans-serif;
+}
+
+
+p {
+ line-height: 18px;
+ padding-top: 10px;
+ text-align: left;
+ font-size: 14px;
+ color: rgb(100,100,100);
+ font-family: verdana, arial, sans-serif;
+}
+
+ul {
+ line-height: 18px;
+ text-align: left;
+ font-size: 12px;
+ color: rgb(100,100,100);
+ font-family: verdana, arial, sans-serif;
+}
+
+a {
+ outline-style: none;
+ outline-width: medium;
+ text-decoration: none;
+ color: rgb(100,100,100);
+ font-family: verdana, arial, sans-serif;
+ font-size: 12px;
+}
+
+a:hover {
+ color: rgb(50,50,50);
+ -webkit-transition: color .3s linear;
+}
+
+.fancy-link {
+ display: block;
+ height: auto;
+ color: rgb(50,50,50);
+ text-shadow: rgb(250,250,250) 1px 1px 1px;
+ font-size: 20px;
+ text-align: center;
+ padding: 5px 0 5px 0;
+ border: 1px solid rgb(150,150,150);
+ border-radius: 4px;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -o-border-radius: 4px;
+ -khtml-border-radius: 4px;
+ behavior: url(/css/border-radius.htc);
+ border-radius: 4px;
+ background-color: rgb(210,210,210);
+ background-image: -moz-linear-gradient(top, rgb(235,235,235), rgb(200,200,200)); /* FF3.6 */
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(235,235,235)),color-stop(1, rgb(200,200,200))); /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(rgb(235,235,235), rgb(200,200,200)); /* Chrome 10+, Saf6 */
+ background-image: linear-gradient(top, rgb(235,235,235), rgb(200,200,200));
+           filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(235,235,235)', EndColorStr='rgb(200,200,200)'); /* IE6–IE9 */
+}
+
+.fancy-link:hover {
+ background-color: rgb(200,200,200);
+ background-image: -moz-linear-gradient(top, rgb(200,200,200), rgb(235,235,235)); /* FF3.6 */
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(200,200,200)),color-stop(1, rgb(235,235,235))); /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(rgb(200,200,200), rgb(235,235,235)); /* Chrome 10+, Saf6 */
+ background-image: linear-gradient(top, rgb(200,200,200), rgb(235,235,235));
+           filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(200,200,200)', EndColorStr='rgb(235,235,235)'); /* IE6–IE9 */
+}
+
+.fade-link {
+ opacity: .85;
+}
+
+.fade-link:hover {
+ opacity: 1;
+ -webkit-transition: opacity .3s linear;
+}
+
+.center {
+ text-align: center;
+}
+
+
+
+
+
+/*-----------------------------------------
+			ClearFix & Other
+-----------------------------------------*/
+
+.clearfix:after {
+ content:".";
+ display:block;
+ height:0;
+ clear:both;
+ visibility:hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+.float { float: left; }
+
+.clear {
+ clear: both;
+}
+
+/*-----------------------------------------
+-----------------------------------------*/
+
+
+html, body {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ /*background: #ECECEC;*/
+ color:rgb(51,51,51);
+ background: url(images/layout/bg2.png) repeat;
+}
+
+.wrap {
+ width: 940px;
+ margin: 0px auto;
+}
+
+ul, div {
+ display: block;
+}
+
+li {
+ display: list-item;
+}
+
+#wrapper {
+ width: 100%;
+ height: 100%;
+}
+
+
+/*-------------  Header  -------------*/
+
+#header {
+ width: 100%;
+ min-width: 960px;
+ float: left;
+ clear: both;
+ display: inline;
+}
+
+#nav {
+ float: right;
+ width: 405px;
+ margin: 30px 0px 38px 0px;
+ list-style: none;
+}
+
+#nav li {
+ float: left;
+ display: inline;
+}
+
+#nav li a {
+ -moz-background-clip: border;
+ -moz-background-inline-policy: continuous;
+ -moz-background-origin: padding;
+ background:transparent url(images/layout/nav2.png) repeat scroll 0 0;
+ display: block;
+ float: left;
+ height: 42px;
+ text-indent: -9000px;
+}
+
+#nav li a:hover {
+ opacity: 1;
+}
+
+#nav li.selected a {
+ opacity: 1;
+}
+
+#nav li.home a {
+ width: 85px;
+ background-position: 0 0;
+}
+
+#nav li.moonviewer a {
+ width: 138px;
+ background-position: -85px 0;
+}
+
+#nav li.shop a {
+ width: 77px;
+ background-position: -223px 0;
+}
+
+#nav li.company a {
+ width: 105px;
+ background-position: -300px 0;
+}
+
+#nav li.home a:hover {
+ background-position: 0 -42px;
+}
+
+#nav li.moonviewer a:hover {
+ background-position: -85px -42px;
+}
+
+#nav li.shop a:hover {
+ background-position: -223px -42px;
+}
+
+#nav li.company a:hover {
+ background-position: -300px -42px;
+}
+
+#nav li.home.selected a, #nav li.home a:active {
+ background-position: 0 -84px;
+}
+
+#nav li.moonviewer.selected a, #nav li.moonviewer a:active {
+ background-position: -85px -84px;
+}
+
+#nav li.shop.selected a, #nav li.shop a:active {
+ background-position: -223px -84px;
+}
+
+#nav li.company.selected a, #nav li.company a:active {
+ background-position: -300px -84px;
+}
+
+#logo {
+ float: left;
+}
+
+#logo a {
+ display: block;
+ background: url(images/layout/logo.png) no-repeat;
+ width: 285px;
+ height: 56px;
+ margin: 26px 0px 8px 0px;
+}
+
+/*-------------  Body  -------------*/
+
+#body {
+ width: 100%;
+ min-width: 960px;
+ float: left;
+ clear: both;
+ display: inline;
+ padding-bottom: 40px;
+}
+
+/*-------------  Body - Home  -------------*/
+
+#hero {
+ width: 940px;
+ height: 420px;
+ position: relative;
+ background: transparent url(images/hero.png) no-repeat;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -o-border-radius: 4px;
+ -khtml-border-radius: 4px;
+ behavior: url(/css/border-radius.htc);
+ border-radius: 4px;
+ -moz-box-shadow: 0px 3px 4px rgb(150,150,150);
+ -webkit-box-shadow: 0px 3px 4px rgb(150,150,150);
+ box-shadow: 0px 3px 4px rgb(150,150,150);
+}
+
+#hero a {
+ float: left;
+}
+
+#hero-logo {
+ width: 275px;
+ height: 74px;
+ background: url(images/layout/moonviewer_logo.png) no-repeat;
+}
+
+.mv_branding {
+ width: 431px;
+ height: auto;
+ padding: 110px 0 0 43px;
+}
+
+#mv_brand_logo {
+ background: url(images/layout/mv_branding.png) no-repeat;
+ padding-bottom: 30px;
+ width: 431px;
+ height: 77px;
+}
+
+#mv_purchase_btn {
+ background:transparent url(images/layout/mv_purchase_button.png) repeat scroll 0 0;
+ margin-left: 88px;
+ width: 249px;
+ height: 51px;
+ background-position: 0 0;
+}
+
+#mv_purchase_btn:hover {
+ width: 249px;
+ height: 51px;
+ background-position: 0 -51px;
+}
+
+.content {
+ clear: both;
+ padding: 30px 40px 0px 40px;
+}
+
+#company-col {
+ width: 630px;
+ float: right;
+ 
+}
+
+.left {
+ float: left;
+}
+
+.left-col {
+ float: left;
+ width: 420px;
+ height: auto;
+ padding-right: 20px;
+}
+
+.right-col {
+ float: right;
+ width: 420px;
+ height: auto;
+}
+
+.intro {
+ text-align: center;
+ background: url(images/layout/crease.png) no-repeat bottom;
+ padding: 0px 120px 45px 120px;
+ margin: 15px 0 40px 0;
+ min-height: 12px;
+}
+
+.intro p {
+ text-align: center;
+}
+
+.comming-soon {
+ text-align: center;
+ padding: 0px 120px 45px 120px;
+ margin: 50px 0px;
+}
+
+.comming-soon p {
+ text-align: center;
+}
+
+.hot-point {
+ float: left;
+ clear: both;
+ display: inline;
+ padding-bottom: 40px;
+}
+
+.img-left {
+ float: left;
+ margin: 0 30px 0 0;
+}
+
+product-intro .hot-point img {
+ float: left;
+ margin: 20px 75px 0 35px;
+}
+
+#promotional {
+ clear: both;
+ width: 880px;
+ height: 37px;
+ margin: 0 auto;
+ padding: 10px 0 40px 0;
+}
+
+.promotional-link {
+ width: 420px;
+ height: 37px;
+ margin: 0 10px;
+ float: left;
+ display: inline;
+}
+
+.promotional-link a {
+ display: block;
+ width: 420px;
+ height: 30px;
+ color: rgb(50,50,50);
+ text-shadow: rgb(180,180,180) 1px 1px 1px;
+ font-size: 20px;
+ text-align: center;
+ padding: 5px 0 0 0;
+ border: 1px solid rgb(150,150,150);
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -o-border-radius: 4px;
+ -khtml-border-radius: 4px;
+ behavior: url(/css/border-radius.htc);
+ border-radius: 4px;
+ background-color: rgb(101,189,230);
+ background-image: -moz-linear-gradient(top, rgb(101,189,230), rgb(31,136,222)); /* FF3.6 */
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(101,189,230)),color-stop(1, rgb(31,136,222))); /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(rgb(101,189,230), rgb(31,136,222)); /* Chrome 10+, Saf6 */
+ background-image: linear-gradient(top, rgb(101,189,230), rgb(31,136,222));
+           filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(101,189,230)', EndColorStr='rgb(31,136,222)'); /* IE6–IE9 */
+}
+
+.promotional-link a:hover {
+ color: rgb(70,70,70);
+ background-color: rgb(31,136,222);
+ background-image: -moz-linear-gradient(top, rgb(31,136,222), rgb(101,189,230)); /* FF3.6 */
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(31,136,222)),color-stop(1, rgb(101,189,230))); /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(rgb(31,136,222), rgb(101,189,230)); /* Chrome 10+, Saf6 */
+ background-image: linear-gradient(top, rgb(31,136,222), rgb(31,136,222));
+           filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(31,136,222)', EndColorStr='rgb(101,189,230)'); /* IE6–IE9 */
+}
+
+.purchase a {
+ background-color: rgb(25,153,55);
+ background-image: -moz-linear-gradient(top, rgb(47,235,69), rgb(25,153,55)); /* FF3.6 */
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(47,235,69)),color-stop(1, rgb(25,153,55))); /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(rgb(47,235,69), rgb(25,153,55)); /* Chrome 10+, Saf6 */
+ background-image: linear-gradient(top, rgb(47,235,69), rgb(25,153,55));
+           filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(47,235,69)', EndColorStr='rgb(25,153,55)'); /* IE6–IE9 */
+}
+
+.purchase a:hover {
+ background-color: rgb(47,235,69);
+ background-image: -moz-linear-gradient(top, rgb(25,153,55), rgb(47,235,69)); /* FF3.6 */
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(25,153,55)),color-stop(1, rgb(47,235,69))); /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(rgb(25,153,55), rgb(47,235,69)); /* Chrome 10+, Saf6 */
+ background-image: linear-gradient(top, rgb(25,153,55), rgb(47,235,69));
+           filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(25,153,55)', EndColorStr='rgb(47,235,69)'); /* IE6–IE9 */
+}
+
+
+/*-------------  Body - Product  -------------*/
+
+#product-header {
+ height: 60px;
+ width: 800px;
+ margin: 0 auto;
+ position: relative;
+ background: url(images/layout/moon_rise.png) no-repeat;
+ padding-top: 20px;
+ /*top: 80px;*/
+}
+
+#branding {
+ width: 298px;
+ height: 44px;
+ margin: 0 auto;
+ opacity: 0;
+}
+
+#product-menu {
+ width: 940px;
+ height: 32px;
+ margin-bottom: 0px;
+ position: relative;
+ z-index: 100;
+}
+
+#product-nav {
+ float: left;
+ clear: both;
+ display: inline;
+ width: 940px;
+ height: 30px;
+ /*background: url(images/layout/sub_nav2.png) no-repeat;*/
+ background-color: rgb(210,210,210);
+ background-image: -moz-linear-gradient(top, rgb(235,235,235), rgb(200,200,200));
+ background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(235,235,235)),color-stop(1, rgb(200,200,200)));
+ background-image: -webkit-linear-gradient(rgb(235,235,235), rgb(200,200,200));
+ background-image: linear-gradient(top, rgb(235,235,235), rgb(200,200,200));
+           filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgb(235,235,235)', EndColorStr='rgb(200,200,200)');
+ border: 1px solid rgb(150,150,150);
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -o-border-radius: 4px;
+ -khtml-border-radius: 4px;
+ behavior: url(/css/border-radius.htc);
+ border-radius: 4px;
+ -moz-box-shadow: 0px 3px 4px rgb(150,150,150);
+ -webkit-box-shadow: 0px 3px 4px rgb(150,150,150);
+ box-shadow: 0px 3px 4px rgb(150,150,150);
+}
+
+#purchase {
+ width: 89px;
+ height: 22px;
+ float: right;
+ display: inline;
+ margin: 4px 4px 0px 0px;
+}
+
+#purchase a {
+ display: block;
+ float: right;
+ height: 19px;
+ width: 89px;
+ background: url(images/layout/purchase_button.png) no-repeat;
+ background-position: 0 0;
+ text-align: center;
+ padding-top: 3px;
+ text-shadow: rgb(123,225,115) 1px 1px 1px;
+ color: rgb(50,50,50);
+}
+
+#purchase a:hover {
+ color: rgb(70,70,70);
+ background-position: 0 -23px;
+}
+
+#slider {
+    position:relative;
+    width:940px; /* Change this to your images width */
+    height:380px; /* Change this to your images height */
+    background:url(images/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+
+#slider a {
+    border:0;
+    display:block;
+}
+
+.nivo-controlNav {
+	position:absolute;
+	left:382px;
+	bottom: 10px;
+}
+.nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(images/layout/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.crease {
+ width: 940px;
+ height: 12px;
+}
+
+.crease-reverse {
+ background: url(images/layout/crease_reverse.png) no-repeat bottom;
+}
+
+.product-images {
+ position: relative;
+ z-index: 100;
+ width: 940px;
+ height: 380px;
+ margin-top: 20px;
+ background-color: transparent;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -o-border-radius: 4px;
+ -khtml-border-radius: 4px;
+ behavior: url(/css/border-radius.htc);
+ border-radius: 4px;
+ -moz-box-shadow: 0px 3px 4px rgb(150,150,150);
+ -webkit-box-shadow: 0px 3px 4px rgb(150,150,150);
+ box-shadow: 0px 3px 4px rgb(150,150,150);
+}
+
+
+.product-content {
+ clear: both;
+ padding: 30px 40px 0px 40px;
+}
+
+#sub-nav {
+ height: 30px;
+ display: inline;
+}
+
+#sub-nav li {
+ float: left;
+ margin-top: 7px;
+}
+
+#sub-nav li a {
+ display: block;
+ float: left;
+ margin-left: 25px;
+ text-shadow: rgb(245,245,245) 1px 1px 1px;
+}
+
+#sub-nav li.selected a {
+ color: rgb(49,132,180);
+}
+
+.product-intro {
+ width: 840px;
+ padding-bottom: 40px;
+ background: url(images/layout/crease.png) no-repeat bottom;
+}
+
+.product-intro img {
+ float: left;
+ margin: 40px 46px 0 30px;
+}
+
+.demo {
+ width: 608px;
+ margin: 30px 0 10px 230px;
+}
+
+
+.moonviewer-details {
+ text-align: center;
+ margin: 30px 0 40px 0;
+}
+.moonviewer-details p {
+ text-align: center;
+ padding: 0px 190px 30px 190px;
+}
+
+.moonviewer-details-2 {
+ padding: 50px 0 40px 0;
+ background: url(images/layout/crease_reverse.png) no-repeat top;
+}
+
+#bullets {
+ padding-left: 20px;
+}
+
+#bullets li {
+ list-style: outside;
+}
+
+#polar-view {
+ width: 860px;
+ height: 241px;
+ background: url(images/layout/polar_view.png) no-repeat;
+}
+
+#earth-view {
+ width: 860px;
+ height: 206px;
+ background: url(images/layout/earth_view.png) no-repeat;
+}
+
+#dark-divider {
+ height: 1px;
+ width: 860px;
+ background: url(images/layout/dark_divider.png) no-repeat;
+}
+
+/*-------------  Body - Lessons  -------------*/
+
+.lesson {
+ padding: 0 0 40px 0;
+ margin: 0 0 40px 0;
+ border-bottom: 1px solid rgb(100,100,100);
+}
+
+.lesson-title {
+
+}
+
+.lesson-content {
+ padding: 0 20px;
+}
+
+#phases-of-the-moon {
+ padding: 0 20px;
+}
+
+/*-------------  Body - Store  -------------*/
+
+.store-temp {
+ text-align: center;
+ padding: 0px 120px 45px 120px;
+ margin: 50px 0px;
+}
+
+.store-temp p {
+ text-align: center;
+}
+
+
+/*-------------  Body - Company  -------------*/
+
+#profile-pic {
+ float: left;
+ /*background: url(images/profile.jpg) no-repeat;*/
+ margin: 5px 30px 0 0;
+}
+
+#about p {
+ font-size: 12px;
+}
+
+
+/*-------------  Footer  -------------*/
+
+#footer {
+ width: 100%;
+ min-width: 960px;
+ height: 60px;
+ float: left;
+ clear: both;
+ display: inline;
+}
+
+#footer .wrap {
+ border-top: 1px solid rgb(100,100,100);
+}
+
+#footer p {
+ float: left;
+ display: inline;
+ padding-top: 5px;
+ font-size: 10px;
+}
+
+#footer-nav {
+ float: right;
+ padding-top: 5px;
+ list-style: none;
+ font-size: 10px;
+}
+
+#footer-nav li {
+ float: left;
+ display: inline;
+ padding-left: 20px;
+}
+
+
+
+
+
