@@ -1,18 +1,22 @@
-@import "reset";
+//@import "reset";
 @import "bourbon/bourbon";
 @import "variables";
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 26px;
+  margin: 0;
 }
 
 html, body {
+  color: rgb(50, 50, 50);
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 300;
   height: 100%;
   width: 100%;
 }
@@ -23,11 +27,13 @@ body {
 }
 
 ul {
- line-height: 18px;
- text-align: left;
- font-size: 12px;
- color: rgb(100,100,100);
- font-family: verdana, arial, sans-serif;
+  line-height: 18px;
+  list-style: none;
+  text-align: left;
+  font-size: 12px;
+  //color: rgb(100,100,100);
+  font-family: verdana, arial, sans-serif;
+  padding: 0;
 }
 
 a {
@@ -297,18 +303,14 @@ li {
  height: 77px;
 }
 
-#mv_purchase_btn {
- background:transparent url(/images/layout/mv_purchase_button.png) repeat scroll 0 0;
- margin-left: 88px;
- width: 249px;
- height: 51px;
- background-position: 0 0;
-}
-
-#mv_purchase_btn:hover {
- width: 249px;
- height: 51px;
- background-position: 0 -51px;
+a#mv_purchase_btn {
+  color: tint(#00D138, 20%);
+  @include button(shiny, #64B2A7);
+  font-size: 50px;
+  line-height: 1em;
+  margin-left: 110px;
+  padding: 10px 0 15px 0;
+  width: 200px;
 }
 
 .content {
@@ -365,7 +367,6 @@ li {
  float: left;
  clear: both;
  display: inline;
- padding-bottom: 40px;
 }
 
 .img-left {
@@ -480,7 +481,6 @@ product-intro .hot-point img {
  display: inline;
  width: 940px;
  height: 30px;
- /*background: url(/images/layout/sub_nav2.png) no-repeat;*/
  background-color: rgb(210,210,210);
  background-image: -moz-linear-gradient(top, rgb(235,235,235), rgb(200,200,200));
  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgb(235,235,235)),color-stop(1, rgb(200,200,200)));
@@ -599,6 +599,7 @@ product-intro .hot-point img {
 #sub-nav {
  height: 30px;
  display: inline;
+ list-style: none;
 }
 
 #sub-nav li {
@@ -714,11 +715,6 @@ product-intro .hot-point img {
  /*background: url(images/profile.jpg) no-repeat;*/
  margin: 5px 30px 0 0;
 }
-
-#about p {
- font-size: 12px;
-}
-
 
 /*-------------  Footer  -------------*/
 
